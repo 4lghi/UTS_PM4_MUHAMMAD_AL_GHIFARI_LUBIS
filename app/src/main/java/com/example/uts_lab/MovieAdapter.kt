@@ -26,7 +26,22 @@ class MovieAdapter(private val movieList: List<Movie>) : RecyclerView.Adapter<Mo
         holder.rvJudul.text = currentItem.judul
         holder.rvTahun.text = currentItem.tahun
 
+        holder.itemView.setOnClickListener {
+            val context = holder.itemView.context
+            val intent = Intent(context, DetailActivity::class.java).apply {
+                putExtra("judul", currentItem.judul)
+                putExtra("tahun", currentItem.tahun)
+                putExtra("rating", currentItem.rating)
+                putExtra("genre", currentItem.genre)
+                putExtra("synopsis", currentItem.synopsis)
+                putExtra("trailer", currentItem.trailer)
+                putExtra("releaseDate", currentItem.releaseDate)
+                putExtra("director", currentItem.director)
+            }
+            context.startActivity(intent)
+        }
     }
+
 
     class MovieViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         val rvPoster: ImageView = itemView.findViewById(R.id.poster_movie)

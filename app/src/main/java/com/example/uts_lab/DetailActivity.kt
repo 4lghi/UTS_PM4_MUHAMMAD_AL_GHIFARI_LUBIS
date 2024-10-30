@@ -1,20 +1,52 @@
 package com.example.uts_lab
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import android.widget.TextView
 
 class DetailActivity : AppCompatActivity() {
+
+    private lateinit var judulTv: TextView
+    private lateinit var tahunTv: TextView
+    private lateinit var ratingTv: TextView
+    private lateinit var genreTv: TextView
+    private lateinit var synopsisTv: TextView
+    private lateinit var trailerTv: TextView
+    private lateinit var releaseDateTv: TextView
+    private lateinit var directorTv: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_detail)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+
+        // Initialize your TextViews
+        judulTv = findViewById(R.id.judul_tv)
+        tahunTv = findViewById(R.id.tahun_tv)
+        ratingTv = findViewById(R.id.rating)
+        genreTv = findViewById(R.id.genre_tv)
+        synopsisTv = findViewById(R.id.synopsis_content_tv)
+        trailerTv = findViewById(R.id.trailer_content_tv)
+        releaseDateTv = findViewById(R.id.release_content_tv) // Add this TextView in your layout
+        directorTv = findViewById(R.id.director_content_tv) // Add this TextView in your layout
+
+        // Get the data from the intent
+        val judul = intent.getStringExtra("judul")
+        val tahun = intent.getStringExtra("tahun")
+        val rating = intent.getStringExtra("rating")
+        val genre = intent.getStringExtra("genre")
+        val synopsis = intent.getStringExtra("synopsis")
+        val trailer = intent.getStringExtra("trailer")
+        val releaseDate = intent.getStringExtra("releaseDate")
+        val director = intent.getStringExtra("director")
+
+        // Set the data to the TextViews
+        judulTv.text = judul
+        tahunTv.text = tahun
+        ratingTv.text = rating
+        genreTv.text = genre
+        synopsisTv.text = synopsis
+        trailerTv.text = trailer
+        releaseDateTv.text = releaseDate
+        directorTv.text = director
     }
 }

@@ -95,11 +95,22 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    private fun getData (){
-        for (i in posterList.indices){
-            val movie = Movie(judulList[i], tahunList[i], posterList[i])
+    private fun getData() {
+        for (i in posterList.indices) {
+            val movie = Movie(
+                judulList[i],
+                tahunList[i],
+                posterList[i],
+                "8.5", // Example rating
+                "Drama", // Example genre
+                "Synopsis of the movie goes here.", // Example synopsis
+                "Trailer URL or ID", // Example trailer
+                "Release Date", // Example release date
+                "Director Name" // Example director
+            )
             movieList.add(movie)
         }
         recyclerView.adapter = MovieAdapter(movieList)
     }
+
 }
