@@ -18,6 +18,12 @@ class MainActivity : AppCompatActivity() {
     lateinit var posterList: Array<Int>
     lateinit var judulList: Array<String>
     lateinit var tahunList: Array<String>
+    lateinit var ratingList: Array<String>
+    lateinit var genreList: Array<String>
+    lateinit var synopsisList: Array<String>
+    lateinit var trailerList: Array<String>
+    lateinit var releaseDateList: Array<String>
+    lateinit var directorList: Array<String>
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,10 +42,10 @@ class MainActivity : AppCompatActivity() {
             R.drawable.poster3,
             R.drawable.poster4,
             R.drawable.poster5,
-            R.drawable.poster1,
-            R.drawable.poster2,
-            R.drawable.poster3,
-            R.drawable.poster4
+            R.drawable.poster6,
+            R.drawable.poster7,
+            R.drawable.poster8,
+            R.drawable.poster9
         )
 
         judulList =  arrayOf(
@@ -48,22 +54,83 @@ class MainActivity : AppCompatActivity() {
             "Birdman",
             "Ant-Man",
             "Handmaiden",
-            "Jaws",
-            "Parasite",
-            "Birdman",
-            "Ant-Man"
+            "Black Swan",
+            "Dune",
+            "John Wick 2",
+            "The G.S."
         )
 
         tahunList = arrayOf(
-            "2002",
-            "2004",
-            "2022",
-            "2000",
-            "1999",
-            "2002",
-            "2004",
-            "2022",
-            "2000"
+            "1975",  // year for Jaws
+            "2019",  // year for Parasite
+            "2014",  // year for Birdman
+            "2015",  // year for Ant-Man
+            "2016",  // year for The Handmaiden
+            "2010",  // year for Black Swan
+            "2021",  // year for Dune
+            "2017",  // year for John Wick: Chapter 2
+            "2017"   // year for The Greatest Showman
+        )
+
+        ratingList = arrayOf("8.0/10", "8.6/10", "7.7/10", "7.3/10", "8.1/10", "8.0/10", "8.0/10", "7.5/10", "7.6/10")
+        genreList = arrayOf(
+            "Thriller, Adventure",               // Jaws
+            "Drama, Thriller",                   // Parasite
+            "Drama, Comedy",                     // Birdman
+            "Action, Adventure, Comedy",         // Ant-Man
+            "Drama, Mystery, Romance",           // The Handmaiden
+            "Drama, Thriller",                   // Black Swan
+            "Sci-Fi, Adventure, Action",         // Dune
+            "Action, Thriller",                  // John Wick: Chapter 2
+            "Drama, Musical, Biography"          // The Greatest Showman
+        )
+
+        synopsisList = arrayOf(
+            "A giant shark terrorizes a small beach town, leading to a summer of terror for locals and tourists.",
+            "A poor family schemes to become employed by a wealthy family and infiltrate their household.",
+            "A washed-up actor known for a superhero role struggles to mount a Broadway play while dealing with his ego.",
+            "A former thief turned superhero must reclaim his identity and save the world by shrinking down to size.",
+            "In 1930s Korea, a conman poses as a Japanese nobleman to win the heart of a rich heiress.",
+            "A ballerina's obsession with perfection leads her down a dark path as she prepares for a major role.",
+            "In a dystopian future, a young man must navigate a dangerous desert planet to find a precious resource.",
+            "Hitman John Wick is forced back into the criminal underworld he left behind after a blood oath.",
+            "The story of P.T. Barnum's creation of the circus and the lives of the performers who made it unique."
+        )
+
+        trailerList = arrayOf(
+            "https://www.youtube.com/watch?v=U1fu_s8l2zE", // Jaws
+            "https://www.youtube.com/watch?v=5x0nZaXnUqU", // Parasite
+            "https://www.youtube.com/watch?v=uCk-4U1vH1g", // Birdman
+            "https://www.youtube.com/watch?v=8JqXt3QeGJ4", // Ant-Man
+            "https://www.youtube.com/watch?v=2sN4-6cqNqY", // The Handmaiden
+            "https://www.youtube.com/watch?v=5a13Izzc1cg", // Black Swan
+            "https://www.youtube.com/watch?v=Z7f0n5_XWQw", // Dune
+            "https://www.youtube.com/watch?v=V9M2a2R1X8g", // John Wick: Chapter 2
+            "https://www.youtube.com/watch?v=GxE_Jz1v8GA"  // The Greatest Showman
+        )
+
+        releaseDateList = arrayOf(
+            "1975-06-20", // Jaws
+            "2019-05-30", // Parasite
+            "2014-10-17", // Birdman
+            "2015-07-17", // Ant-Man
+            "2016-06-01", // The Handmaiden
+            "2010-12-03", // Black Swan
+            "2021-10-22", // Dune
+            "2017-02-10", // John Wick: Chapter 2
+            "2017-12-20"  // The Greatest Showman
+        )
+
+        directorList = arrayOf(
+            "Steven Spielberg",        // Jaws
+            "Bong Joon-ho",           // Parasite
+            "Alejandro G. Iñárritu",  // Birdman
+            "Peyton Reed",            // Ant-Man
+            "Park Chan-wook",         // The Handmaiden
+            "Darren Aronofsky",       // Black Swan
+            "Denis Villeneuve",       // Dune
+            "Chad Stahelski",         // John Wick: Chapter 2
+            "Michael Gracey"          // The Greatest Showman
         )
 
         recyclerView = findViewById(R.id.recyclerView)
@@ -101,12 +168,12 @@ class MainActivity : AppCompatActivity() {
                 judulList[i],
                 tahunList[i],
                 posterList[i],
-                "8.5", // Example rating
-                "Drama", // Example genre
-                "Synopsis of the movie goes here.", // Example synopsis
-                "Trailer URL or ID", // Example trailer
-                "Release Date", // Example release date
-                "Director Name" // Example director
+                ratingList[i],
+                genreList[i],
+                synopsisList[i],
+                trailerList[i],
+                releaseDateList[i],
+                directorList[i]
             )
             movieList.add(movie)
         }

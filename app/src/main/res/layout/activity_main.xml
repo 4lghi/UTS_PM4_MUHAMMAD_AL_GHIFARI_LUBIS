@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#F1EDEA"
     android:visibility="visible"
     tools:context=".MainActivity">
 
@@ -36,6 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/home_image"
+                app:layout_constraintBottom_toTopOf="@+id/search_tv"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -45,9 +47,9 @@
                 android:id="@+id/search_tv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:padding="16dp"
+                android:layout_marginTop="37dp"
                 android:text="Search"
-                android:textSize="20sp"
+                android:textSize="13sp"
                 app:layout_constraintEnd_toStartOf="@+id/icon_iv"
                 app:layout_constraintStart_toStartOf="@id/recyclerView"
                 app:layout_constraintTop_toBottomOf="@+id/carousel1_iv" />
@@ -56,32 +58,51 @@
                 android:id="@+id/icon_iv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="16dp"
                 android:src="@drawable/frame"
                 app:layout_constraintEnd_toEndOf="@id/recyclerView"
-                app:layout_constraintTop_toBottomOf="@id/carousel1_iv" />
+                app:layout_constraintTop_toTopOf="@id/search_tv" />
 
             <TextView
                 android:id="@+id/home_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:padding="16dp"
+                android:paddingTop="22dp"
                 android:text="Home"
-                android:textSize="20sp"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@id/recyclerView"
                 app:layout_constraintTop_toBottomOf="@id/search_tv" />
+
+            <TextView
+                android:id="@+id/favorite_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:paddingTop="22dp"
+                android:text="Favorite"
+                android:textSize="16sp"
+                app:layout_constraintTop_toTopOf="@+id/home_tv"
+                app:layout_constraintStart_toEndOf="@+id/home_tv"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/line"
+                app:layout_constraintStart_toStartOf="@+id/home_tv"
+                app:layout_constraintTop_toBottomOf="@+id/home_tv"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="28dp"
+                android:layout_marginTop="22dp"
                 android:layout_marginEnd="28dp"
                 app:layout_constraintBottom_toBottomOf="@id/guideline"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/home_tv" >
+                app:layout_constraintTop_toBottomOf="@id/home_tv">
 
             </androidx.recyclerview.widget.RecyclerView>
 
