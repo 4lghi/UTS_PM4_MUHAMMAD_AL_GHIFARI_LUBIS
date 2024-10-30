@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">UTS_LAB</string>
+    <string name="header">MyVie</string>
+    <string name="search">Search</string>
+    <string name="home">Home</string>
+    <string name="favorite">Favorite</string>
+    <string name="judul">Judul</string>
+    <string name="tahun">Tahun</string>
+    <string name="rating">Rating</string>
+    <string name="genre">Genre</string>
+    <string name="synopsis">Synopsis</string>
+    <string name="synopsis_content">Lorem Ipsum</string>
+    <string name="trailer">Trailer</string>
+    <string name="trailer_content">Lorem Ipsum</string>
+    <string name="release">Release Date</string>
+    <string name="release_content">Lorem Ipsum</string>
+    <string name="director">Director</string>
+    <string name="director_content">Lorem Ipsum</string>
+
 </resources>
