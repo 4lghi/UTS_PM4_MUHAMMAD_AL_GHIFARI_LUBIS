@@ -98,15 +98,15 @@ class MainActivity : AppCompatActivity() {
         )
 
         trailerList = arrayOf(
-            "https://www.youtube.com/watch?v=U1fu_s8l2zE", // Jaws
-            "https://www.youtube.com/watch?v=5x0nZaXnUqU", // Parasite
-            "https://www.youtube.com/watch?v=uCk-4U1vH1g", // Birdman
-            "https://www.youtube.com/watch?v=8JqXt3QeGJ4", // Ant-Man
-            "https://www.youtube.com/watch?v=2sN4-6cqNqY", // The Handmaiden
-            "https://www.youtube.com/watch?v=5a13Izzc1cg", // Black Swan
-            "https://www.youtube.com/watch?v=Z7f0n5_XWQw", // Dune
-            "https://www.youtube.com/watch?v=V9M2a2R1X8g", // John Wick: Chapter 2
-            "https://www.youtube.com/watch?v=GxE_Jz1v8GA"  // The Greatest Showman
+            "https://www.youtube.com/watch?v=U1fu_sA7XhE", // Jaws
+            "https://www.youtube.com/watch?v=SEUXfv87Wpk", // Parasite
+            "https://www.youtube.com/watch?v=uJfLoE6hanc", // Birdman
+            "https://www.youtube.com/watch?v=pWdKf3MneyI", // Ant-Man
+            "https://www.youtube.com/watch?v=whldChqCsYk", // The Handmaiden
+            "https://www.youtube.com/watch?v=5jaI1XOB-bs", // Black Swan
+            "https://www.youtube.com/watch?v=n9xhJrPXop4", // Dune
+            "https://www.youtube.com/watch?v=XGk2EfbD_Ps", // John Wick: Chapter 2
+            "https://www.youtube.com/watch?v=EodWwczRIe4"  // The Greatest Showman
         )
 
         releaseDateList = arrayOf(

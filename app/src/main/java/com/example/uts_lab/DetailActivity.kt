@@ -1,5 +1,7 @@
 package com.example.uts_lab
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.TextView
@@ -48,5 +50,19 @@ class DetailActivity : AppCompatActivity() {
         trailerTv.text = trailer
         releaseDateTv.text = releaseDate
         directorTv.text = director
+
+        trailerTv.setOnClickListener {
+            trailer?.let {
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(it))
+                intent.setPackage("com.google.android.youtube") // Arahkan ke aplikasi YouTube
+                if (intent.resolveActivity(packageManager) != null) {
+                    startActivity(intent)
+                } else {
+                    // Jika YouTube tidak tersedia, buka di browser
+                    startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(it)))
+                }
+            }
+        }
+
     }
 }
