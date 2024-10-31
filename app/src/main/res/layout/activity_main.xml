@@ -36,7 +36,7 @@
                 android:id="@+id/carousel1_iv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/home_image"
+                android:src="@drawable/home_img"
                 app:layout_constraintBottom_toTopOf="@+id/search_tv"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -47,8 +47,11 @@
                 android:id="@+id/search_tv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:background="@color/grey"
                 android:layout_marginTop="37dp"
                 android:text="@string/search"
+                android:padding="10dp"
+                android:layout_marginRight="17dp"
                 android:textSize="13sp"
                 app:layout_constraintEnd_toStartOf="@+id/icon_iv"
                 app:layout_constraintStart_toStartOf="@id/recyclerView"
@@ -60,7 +63,8 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/frame"
                 app:layout_constraintEnd_toEndOf="@id/recyclerView"
-                app:layout_constraintTop_toTopOf="@id/search_tv" />
+                app:layout_constraintTop_toTopOf="@id/search_tv"
+                app:layout_constraintBottom_toBottomOf="@id/search_tv"/>
 
             <TextView
                 android:id="@+id/home_tv"
